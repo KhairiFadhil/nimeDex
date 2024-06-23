@@ -9,7 +9,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 export default function SideBar({onClick, show}){
     return(
-        <div className={show ? "fixed bg-slate-600 h-full w-[250px]  max-w-[250px] z-50 overflow-hidden transition-all" : "transition-all overflow-hidden fixed bg-slate-600 h-full max-w-[250px] z-50 w-0"}>
+        <div className={show ? "z-[9999] fixed bg-slate-600 h-full w-[250px]  max-w-[250px] z-50 overflow-hidden transition-all" : "transition-all overflow-hidden fixed bg-slate-600 h-full max-w-[250px] z-50 w-0"}>
             <div className="mx-">   
                 <div className="flex m-3 bg-slate-300 h-[75px]" >
                     <div className="flex flex-grow">

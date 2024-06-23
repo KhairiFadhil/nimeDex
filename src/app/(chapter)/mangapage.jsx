@@ -2,7 +2,6 @@
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 function MangaPage({api}) {
-    const ref = useRef(null)
 
   return (
     <div className="flex justify-center flex-col bg-blue-600" >

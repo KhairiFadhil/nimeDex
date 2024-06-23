@@ -25,7 +25,7 @@ function Navbar({show, onClick}){
       }, []);
 
     return(
-    <div className={scrollEffect ? "z-[9999] border-red-600 bg-transparent w-full h-14 fixed z-50 justify-center transition-all" : " bg-slate-900 w-full h-14 fixed z-[9999] justify-center transition-all border-b-2 border-red-600"}>
+    <div className={scrollEffect ? "z-[9998] border-red-600 bg-transparent w-full h-14 fixed z-50 justify-center transition-all" : " bg-slate-900 w-full h-14 fixed z-[9999] justify-center transition-all border-b-2 border-red-600"}>
             <div className="flex mx-auto max-w-[1440px] max-h-14 min-h-14 ">
                 <div className="w-full flex gap-2 px-4 justify-end">
                     <div className="flex min-w-fit mr-auto gap-5 ">
