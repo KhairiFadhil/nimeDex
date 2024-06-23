@@ -2,32 +2,289 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+:root{
+  background-color: black;
+  color: rgb(234, 234, 234)
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+li, a { 
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar_list{
+  display: flex;
+  flex-direction: row;
+}
+.img-list{
+  align-content: center;
+}
+
+.swiper{
+  display: block;
+  position: relative;
+  
+}
+.carousel-card{
+  display: block;
+  flex-shrink: 0;
+  height: 100%;
+  position: relative;
+  width: 100%;
+
+}
+
+.input-search{
+  border-radius: 5px;
+  background-color: rgba(58, 58, 58, 0.481);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+
+input, button{
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-size: 100%;
+  font-variation-settings: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+
+}
+
+.button-carousel{
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 20px 0px;
+  transition: all 0.5s ease-in-out;
+  -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  -webkit-transition: 500ms;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.button-menu{
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 20px 0px;
+  transition: all 0.5s ease-in-out;
+  -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  -webkit-transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+.button-menu:active {
+  -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
+  color: #d6d6d6;
+ font-size: 15px;
+  -webkit-transition: 100ms;
+  transition: 100ms;
+}
+.button-carousel:active {
+  -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
+  color: #d6d6d6;
+ font-size: 15px;
+  -webkit-transition: 100ms;
+  transition: 100ms;
+}
+
+
+.nime-card{
+  border-radius: .25rem;
+  display: block;
+  height: unset;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  position: relative;
+}
+
+.titles{
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, .8));
+  bottom: 0;
+  display: -webkit-box;
+  left: 0;
+  margin-right: 0 !important;
+  overflow: hidden;
+  padding: 1rem .5rem .25rem;
+  position: absolute;
+  text-shadow: 0 0 3px #000;
+  width: 100%;
+  z-index: 999;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.border-bottom{
+  border-bottom: #c70c0c 1px solid;
+  
+}
+
+.slider{
+  display: block;
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.custom-loader {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:conic-gradient(#0000 10%,#766DF4);
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation:s3 1s infinite linear;
+}
+@keyframes s3 {to{transform: rotate(1turn)}}
+
+.HoverCardPrimitive{
+  animation-duration: 400ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.HoverCardPrimitive[data-side='top'] {
+  animation-name: slideDownAndFade;
+}
+.HoverCardPrimitive[data-side='right'] {
+  animation-name: slideLeftAndFade;
+}
+.HoverCardPrimitive[data-side='bottom'] {
+  animation-name: slideUpAndFade;
+}
+.HoverCardPrimitive[data-side='left'] {
+  animation-name: slideRightAndFade;
+}
+
+@keyframes slideUpAndFade {
+  0% {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes slideRightAndFade {
+  0% {
+    opacity: 0;
+    transform: translateX(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
+
+@keyframes slideDownAndFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeftAndFade {
+  0% {
+    opacity: 0;
+    transform: translateX(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+:root{
+  --uc-autohide-toolbox-delay: 200ms; /* Wait 0.1s before hiding toolbars */
+  --uc-toolbox-rotation: 82deg;  /* This may need to be lower on mac - like 75 or so */
+}
+
+:root[sizemode="maximized"]{
+  --uc-toolbox-rotation: 88.5deg;
+}
+
+@media  (-moz-platform: windows){
+  :root:not([lwtheme]) .navigator{ background-color: -moz-dialog !important; }
+}
+
+:root[sizemode="fullscreen"],
+:root[sizemode="fullscreen"] .navigator{ margin-top: 0 !important; }
+
+.navigator{
+  position: fixed !important;
+  display: block;
+  background-color: var(--lwt-accent-color,black) !important;
+  transition: transform 82ms linear, opacity 82ms linear !important;
+  transition-delay: var(--uc-autohide-toolbox-delay) !important;
+  transform-origin: top;
+  transform: rotateX(var(--uc-toolbox-rotation));
+  opacity: 0;
+  line-height: 0;
+  z-index: 1;
+  pointer-events: none;
+  -webkit-transform: rotateX(var(--uc-toolbox-rotation));
+  -moz-transform: rotateX(var(--uc-toolbox-rotation));
+  -ms-transform: rotateX(var(--uc-toolbox-rotation));
+  -o-transform: rotateX(var(--uc-toolbox-rotation));
+}
+
+.navigator:hover,
+.navigator:focus-within{
+  transition-delay: 33ms !important;
+  transform: rotateX(0);
+  opacity: 1;
+}
+/* This ruleset is separate, because not having :has support breaks other selectors as well */
+#mainPopupSet:has(> #appMenu-popup:hover) ~ toolbox{
+  transition-delay: 33ms !important;
+  transform: rotateX(0);
+  opacity: 1;
+}
+
+.navigator > *{ line-height: normal; pointer-events: auto }
+
+.navigator,
+.navigator > *{
+  width: 100vw;
+  -moz-appearance: none !important;
+}
+
+/* These two exist for oneliner compatibility */
+#nav-bar{ width: var(--uc-navigationbar-width,100vw) }
+#TabsToolbar{ width: calc(100vw - var(--uc-navigationbar-width,0px)) }
+
+/* Don't apply transform before window has been fully created */
+:root:not([sessionrestored]) .navigator{ transform:none !important }
+
+:root[customizing] .navigator{
+  position: relative !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+.navigator[inFullscreen] > #PersonalToolbar,
+#PersonalToolbar[collapsed="true"]{ display: none }
