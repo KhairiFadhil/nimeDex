@@ -9,7 +9,7 @@ const HoverCardContent = React.forwardRef(({className, align = "center", sideOff
       align={props.align || "center"}
       sideOffset={sideOffset}
       className={
-        cn("HoverCardPrimitive z-[9999] w-[400px] rounded-md border drop-shadow-lg p-4 shadow-md outline-none",
+        cn("HoverCardPrimitive z-[9999] w-[400px] rounded-md drop-shadow-lg p-4 shadow-md outline-none",
         className)}
       {...props}
     />

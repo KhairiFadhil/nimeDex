@@ -14,7 +14,7 @@ function Navigation() {
       <aside className="">
         <SideBar onClick={showSideBar} show={showNav}/>
       </aside>
-      </>
+</>
   );
 }
 export default Navigation;

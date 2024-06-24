@@ -1,6 +1,7 @@
 "use client"
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
+
 function MangaPage({api}) {
 
   return (

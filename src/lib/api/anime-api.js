@@ -3,6 +3,21 @@ import { FaSleigh } from "react-icons/fa";
 import FetchApi from "./fetch-api";
 
 
+export async function FetchMangaChapter(id){
+  const params = {
+    limit : 0,
+    includes: ['manga', 'scanlation_group']
+  }
+  const response = await FetchApi(`chapter/${id}`,{
+    method : 'GET',
+    params : params,
+    next : {
+      revalidate : 1800
+    }
+  })
+  return response.data
+}
+
 export async function FetchChapterImage(id){
   const response = await FetchApi(`at-home/server/${id}`, {
     method : 'GET',
@@ -21,10 +36,13 @@ export async function FetchChapterImage(id){
     return response.data
 
 }
-export async function FetchMangaChapterFeed(id){
+export async function FetchMangaChapterFeed(id, lang){
   const params = {
     limit : 50,
-    'order[chapter]' : 'desc'
+    'order[chapter]' : 'asc',
+  }
+  if (lang) {
+    params.translatedLanguage = [lang];
   }
   const response =await FetchApi(`manga/${id}/feed`,
     {
