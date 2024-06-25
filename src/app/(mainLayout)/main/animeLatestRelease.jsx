@@ -30,9 +30,8 @@ async function AnimeLatestRelease() {
                     return (
                         <AnimeCard
                             key={`recent-manga${index}`}
-                            title={anime.attributes.title.en}
                             img={coverArt?.attributes?.fileName}
-                            id={anime.id}
+                            api={anime}
                         />
                     );
                 }
@@ -53,9 +52,8 @@ async function AnimeLatestRelease() {
                       return (
                           <AnimeCard
                               key={`Top-manga${index}`}
-                              title={anime.attributes.title.en}
                               img={coverArt?.attributes?.fileName}
-                              id={anime.id}
+                              api={anime}
                           />
                       );
                   }

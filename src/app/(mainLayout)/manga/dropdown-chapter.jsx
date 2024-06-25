@@ -8,7 +8,7 @@ import { useState } from "react";
 function DropDownChapter({api}){
     const [dropDown, setDropDown] = useState(true)
     const HandleClick = () => setDropDown(!dropDown)
-    console.log(Object.values(api[1]).length)
+
     if(Object.values(api[1]).length > 1) {
     return(
         <div className={`flex flex-col w-auto p-2 overflow-hidden transition-all bg-purple-600 ${dropDown ? ` max-h-[100%]` : `max-h-[40px]`}`}>

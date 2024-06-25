@@ -28,9 +28,8 @@ function LoadMore(){
                     return (
                         <AnimeCard
                             key={`recent-manga${index}`}
-                            title={anime.attributes.title.en}
                             img={coverArt?.attributes?.fileName}
-                            id={anime.id}
+                            api={anime}
                         />
                     );
                 }

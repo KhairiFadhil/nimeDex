@@ -22,15 +22,15 @@ function SideMenu({chapterNum, mangaInfo , chapterFeed, nextChapter, prevChapter
             <div>
             <div className="flex w-full h-full justify-center gap-[200px]">
             <div className="h-[full] w-[120x] flex">
-                <Link href={`${prevChapter}`} className="h-[full] w-full text-2xl group transition-all active:text-red-50 hover:text-gray-100 flex items-center text-gray-400"><IoIosArrowBack className="text-6xl"/><span className="">Previous Chapter</span></Link>
+                {prevChapter ? <Link href={`${prevChapter}`} className="h-[full] w-full text-2xl group transition-all active:text-red-50 hover:text-gray-100 flex items-center text-gray-400"><IoIosArrowBack className="text-6xl"/><span className="">Previous Chapter</span></Link> : ''}
         
             </div>
             <div className="text-2xl items-center flex">
                 Chapter {chapterNum}
             </div>
             <div className="h-[full] w-[120x] flex">
-                <Link href={`${nextChapter}`} className="h-[full] w-full text-2xl flex items-center transition-all active:text-red-50 hover:text-gray-100 text-gray-400"><span className="">Next Chapter</span><IoIosArrowForward className="text-6xl"/></Link>
- 
+                {nextChapter ? <Link href={`${nextChapter}`} className="h-[full] w-full text-2xl flex items-center transition-all active:text-red-50 hover:text-gray-100 text-gray-400"><span className="">Next Chapter</span><IoIosArrowForward className="text-6xl"/></Link> : '' }
+
             </div>
             </div>
              {/* <div className="flex">

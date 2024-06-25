@@ -4,6 +4,14 @@ import { IoMdPeople } from "react-icons/io"
 import { CiClock2 } from "react-icons/ci"
 
 function ChaptersList({api, titleStat, chapterNum}){
+  let flag;
+  if (api.attributes.translatedLanguage == 'en'){
+    flag = 'gb'
+  }
+  else {
+    const splitFlag = api.attributes.translatedLanguage.split('-');
+    flag = splitFlag[0]
+  }
     return(
         <Link
               className={`h-[60px] rounded-md flex backdrop-blur-lg py-2 px-2 chapter-list ${chapterNum ===  api.attributes?.chapter ? "bg-neutral-500" : ""} bg-neutral-900
@@ -13,7 +21,7 @@ function ChaptersList({api, titleStat, chapterNum}){
               <div className="flex flex-grow flex-col">
                 <h2 className="flex gap-1 ">
                   <span>
-                    <Image className="" width={20} height={20} src="/images/Flag_of_Indonesia.svg.png" alt="flag"/>
+                    <Image className="" width={20} height={20} src={`https://mangadex.org/img/flags/${flag}.svg`} alt="flag"/>
                   </span>
                     {`Ch. ${api.attributes?.chapter}`} 
                 </h2>

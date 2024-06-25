@@ -16,7 +16,7 @@ const SameChapter = responseData.reduce((acc, value) => {
     return acc; 
 }, {});
 
-console.log(SameChapter)
+console.log()
 responseData.filter(
     (data) => data.attributes.chapter === "1"
   );
