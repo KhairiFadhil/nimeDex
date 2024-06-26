@@ -1,8 +1,7 @@
 ## Evaluasi 
-- lebih baik membuat perencanaan sebelum memulai project 
-- jadi kesusahan anjir 
+
 - code yang sangat amat berantakan 
-- bingung su
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
