@@ -4,8 +4,7 @@ import SearchPage from "../page"
 async function Page({params}){
     const keyword = params.keyword
     const response = await FetchSearchApi(keyword);
-    const searchApi = await response.data
-
+    const searchApi = response.data
 
     return(
         <div>

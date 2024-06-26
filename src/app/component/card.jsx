@@ -5,6 +5,7 @@ import ToolTip from "./tooltip";
 import MotionDiv from "./framer/motion-div";
 
 function AnimeCard({img, api}) {
+  
   let flag = api?.attributes?.originalLanguage === 'ja' ? 'jp' : api?.attributes?.originalLanguage === 'ko' ? 'kr' : api?.attributes?.originalLanguage === 'zh' ? 'cn' : api?.attributes?.originalLanguage === 'en'? 'gb' : api?.attributes?.originalLanguage;
   return (
     <CostumToolTip content={<ToolTip animeId={api?.id}/>} >

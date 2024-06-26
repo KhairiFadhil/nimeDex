@@ -13,7 +13,7 @@ export default function CostumToolTip({
             <HoverCardTrigger asChild>
                 {children}
             </HoverCardTrigger>
-            <HoverCardContent side={ side } className="w-[100%] hidden lg:block bg-popover/75 backdrop-blur-md">
+            <HoverCardContent side={ side } className=" overflow-hidden w-[100%] hidden lg:block bg-popover/75 backdrop-blur-md">
                  { content }
             </HoverCardContent>
 
