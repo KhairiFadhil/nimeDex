@@ -1,4 +1,4 @@
-import { FetchMangaApi, FetchSearchApi } from "@/lib/api/anime-api"
+import { FetchSearchApi } from "@/lib/api/anime-api"
 import SearchPage from "../page"
 
 async function Page({params}){
@@ -6,6 +6,7 @@ async function Page({params}){
     const response = await FetchSearchApi(keyword);
     const searchApi = response.data
 
+    
     return(
         <div>
             <SearchPage api={searchApi} result={keyword}/>

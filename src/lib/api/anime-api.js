@@ -162,9 +162,11 @@ export async function FetchTopAiring(){
 
 export async function FetchSearchApi(search){
   const params = {
-    title: search,
     limit : 25,
     includes: ['author', 'artist', 'cover_art'], 
+  }
+  if(search){
+    params.title = search
   }
   const response = await FetchApi('manga', {
     method: 'GET',

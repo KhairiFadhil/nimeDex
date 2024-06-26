@@ -2,7 +2,8 @@
 const nextConfig = {
     images: {
         remotePatterns:[
-            {hostname: "mangadex.org"}
+            {hostname: "mangadex.org"},
+            
             
         ]  
     }
